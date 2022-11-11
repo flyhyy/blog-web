@@ -1,8 +1,10 @@
 <template>
   <el-menu :default-active="defaultActive" class="menu-vertical" router>
-    <el-menu-item v-for="(item, index) in menu" :index="item.path" :key="index">
-      {{ item.meta.name }}
-    </el-menu-item> 
+    <template v-for="(item, index) in menu">
+      <el-menu-item v-if="!item.meta.hidden" :index="item.path" :key="index">
+        {{ item.meta.name }}
+      </el-menu-item>
+    </template>
   </el-menu>
 </template>
 
