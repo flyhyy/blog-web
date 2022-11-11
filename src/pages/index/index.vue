@@ -21,7 +21,7 @@
         </div>
       </template>
       <template #default>
-        <el-card :body-style="{ padding: '0px', marginBottom: '1px' }">
+        <el-card  :body-style="{ padding: '0px', marginBottom: '1px' }" shadow="hover" @click="onCard(item)">
             <el-image class="card-img"   :src="url" fit="fill" />
           <div  class="card-bottom">
             <div  class="text--style-overflow card-bottom-label" style="font-size:var(--el-font-size-base)">
@@ -46,18 +46,23 @@
  
 <script  setup>
 import { ref} from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute ,useRouter} from 'vue-router';
+import RouterConfig from '../../router/config';
 
 const route = useRoute()
+const router =useRouter()
 const loading  = ref(false)
  
 const url ='https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
 
-
-
 setTimeout(() => {
 loading.value = false
 }, 2000);
+
+function onCard(id){
+    router.push(RouterConfig.indexDetail.path)
+}
+
 // route.path
 // console.log("打印----> ~ file: index.vue ~ line 14 ~ route.path", route.path)
 </script>
