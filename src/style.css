@@ -7,4 +7,36 @@ body {
   margin: 0; 
 }
 
+
+.text-align-right{
+  text-align: right;
+}
+.text-align-center{
+  text-align: center;
+}
+.text-align-left{
+  text-align: left;
+}
+
+.text--style-overflow{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text--style-color__primary{
+  color: #303133;
+}
+.text--style-color__regular{
+  color: #606266;
+}
+.text--style-color__secondary{
+  color: #909399;
+}
+.text--style-color__placeholder{
+  color: #A8ABB2;
+}
+.text--style-color__disabled{
+  color: #C0C4CC;
+}
  
