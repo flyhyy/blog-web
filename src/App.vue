@@ -1,4 +1,6 @@
 <template>
+  <el-backtop  target=".app-main" :right="20" :bottom="100" />
+
   <el-container class="app-container">
     <el-aside>
       <Aside></Aside>
@@ -7,7 +9,7 @@
       <el-header class="border-bottom"> 
         <Header ></Header>  
       </el-header>
-      <el-main>
+      <el-main class="app-main">
         <router-view v-slot="{ Component, route }">
           <transition :name="'fade'" mode="out-in">
             <keep-alive>
