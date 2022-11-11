@@ -60,7 +60,6 @@ loading.value = false
 }, 2000);
 // route.path
 // console.log("打印----> ~ file: index.vue ~ line 14 ~ route.path", route.path)
-
 </script>
 
 <style scoped>
