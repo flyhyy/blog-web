@@ -6,7 +6,27 @@
 body {
   margin: 0; 
 }
+.height--100-pr{
+  height: 100%;
+}
+.over-flow{
+  /* overflow: auto; */
+  overflow-y: overlay;
 
+}
+::-webkit-scrollbar {
+  width: 6px;
+  max-width: 6px;
+  min-width: 6px;
+  /* height: 10px; */
+} 
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color:  #409EFF;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+ 
 
 .text-align-right{
   text-align: right;
