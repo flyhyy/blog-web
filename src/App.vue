@@ -2,9 +2,10 @@
   <el-backtop  target=".app-main" :right="20" :bottom="100" />
 
   <el-container class="app-container">
-    <el-aside>
+    <el-aside width="180px">
+    
       <Aside></Aside>
-    </el-aside>
+  </el-aside>
     <el-container>
       <el-header class="border-bottom"> 
         <Header ></Header>  
