@@ -12,6 +12,6 @@ import {marked} from 'marked'
 
 let markerDownHTML = ref('')
 
-markerDownHTML.value = marked.parse('# hello world')
+markerDownHTML.value = marked.parse('# 这是marker down 解析')
 
 </script>
