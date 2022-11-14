@@ -1,6 +1,7 @@
 
 import PageIndex from '../pages/index/index.vue';
 import PageIndexDetail from '../pages/indexDetail/index.vue'
+import PageHistory from '../pages/history/index.vue'
 import NotFound from '../pages/404/index.vue'
 const RouterConfig = {
     // 404: {
@@ -9,7 +10,6 @@ const RouterConfig = {
     //     redirect: '/404',
     //     component: NotFound,
     //     hidden: true,
-
     // },
     /**
      * 首页
@@ -18,7 +18,7 @@ const RouterConfig = {
         path: '/index',
         name: '首页',
         component: PageIndex,
-        icon: '',
+        icon: 'Tickets',
 
     },
     /**
@@ -35,6 +35,16 @@ const RouterConfig = {
         //     return
         // }
     },
+    /**
+     * 记录
+     */
+    history:{
+        path:'/history',
+        name:'记录',
+        component:PageHistory,
+        icon:'Clock',
+        
+    }
   
 }
 
