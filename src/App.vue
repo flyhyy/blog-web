@@ -1,19 +1,22 @@
 <template>
+  <el-backtop  target=".app-main" :right="20" :bottom="100" />
+
   <el-container class="app-container">
-    <el-aside>
+    <el-aside width="180px">
+    
       <Aside></Aside>
-    </el-aside>
+  </el-aside>
     <el-container>
       <el-header class="border-bottom"> 
         <Header ></Header>  
       </el-header>
-      <el-main>
+      <el-main class="app-main">
         <router-view v-slot="{ Component, route }">
-          <transition :name="route.meta.transition || 'fade'" mode="out-in">
+          <transition :name="'fade'" mode="out-in">
             <keep-alive>
               <component
                 :is="Component"
-                :key="route.meta.usePathKey ? route.path : undefined"
+                :key=" route.path"
               />
             </keep-alive>
           </transition>

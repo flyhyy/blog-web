@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index.js'
 import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import './style.css'
@@ -22,6 +23,8 @@ app.config.errorHandler = (err) => {
 app.config.globalProperties = {
     msg:'msg'
 }
-// app.use(ElementPlus)
-app.use(router).use(ElementPlus)
+app.use(router).use(ElementPlus,{
+  // 配置国际化 
+  locale:zhCn
+})
 app.mount('#app')
